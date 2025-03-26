@@ -1,39 +1,38 @@
-# product-wishlist
+# Product Wishlist App
 
-This template should help get you started developing with Vue 3 in Vite.
+A simple Vue.js application that allows users to manage a wishlist of products. Users can add, mark as purchased, and remove products. The app uses modern Vue 3 features like the Composition API (`<script setup>`) and `localStorage` for persistence.
 
-## Recommended IDE Setup
+![Wishlist Screenshot](./src/assets/prjct.png)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Type Support for `.vue` Imports in TS
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Features
 
-## Customize configuration
+- **Add Products**: Add products with a name, price, and optional image URL.
+- **Mark as Purchased**: Mark products as purchased to track progress.
+- **Remove Products**: Remove unwanted products from the wishlist.
+- **Persistent Storage**: The wishlist is saved in `localStorage`, so it persists even after refreshing the page.
+- **Optional Image URL**: If no image URL is provided, a placeholder ("No Image") is displayed.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Technologies Used
 
-## Project Setup
+- **Vue 3**: Modern JavaScript framework for building user interfaces.
+- **Composition API (`<script setup>`)**: Simplifies component logic and improves readability.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **TypeScript**: Adds type safety and improves developer experience.
+- **localStorage**: Persists the wishlist data locally in the browser.
 
-```sh
-npm install
-```
+## How It Works
 
-### Compile and Hot-Reload for Development
+1. **Adding a Product**:
+   - Fill out the form with the product's name, price, and (optional) image URL.
+   - Click "Add Product" to add it to the wishlist.
 
-```sh
-npm run dev
-```
+2. **Marking as Purchased**:
+   - Click the "Mark as Purchased" button to update the product's status.
 
-### Type-Check, Compile and Minify for Production
+3. **Removing a Product**:
+   - Click the "Remove" button to delete a product from the wishlist.
 
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+4. **Persistence**:
+   - The wishlist is automatically saved to `localStorage` and reloaded when the page is refreshed.
